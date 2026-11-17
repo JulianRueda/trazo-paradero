@@ -4,6 +4,8 @@
 
 **Trazo** dibuja Bogotá como un mapa de metro: papel, tinta y el color de cada línea. El color en pantalla siempre significa "una línea"; todo lo demás es papel y tinta. Nació como el rediseño de mi trabajo final de máster y aquí se ve funcionando sobre una app real.
 
+**La app funcionando.** Capturas de este código en el navegador, en escritorio y en móvil.
+
 <p>
   <img src="docs/trazo/cerca-escritorio.png" alt="Pantalla Cerca en escritorio: barra lateral de Trazo y mapa de Bogotá" width="68%" />
   <img src="docs/trazo/cerca-movil-oscuro.png" alt="Pantalla Cerca en móvil con el tema nocturno" width="23%" />
@@ -11,6 +13,29 @@
 <p>
   <img src="docs/trazo/onboarding-escritorio.png" alt="Onboarding en escritorio con el texto en una columna centrada" width="45.5%" />
   <img src="docs/trazo/bien-publico-escritorio.png" alt="Pantalla Bien público con la pestaña activa en tinta" width="45.5%" />
+</p>
+
+## El rediseño en Figma
+
+El sistema completo vive en Figma: variables con modos Claro, Oscuro y Alto contraste, una escala de texto Normal, Grande y Muy grande conectada a todos los estilos, componentes y pantallas para móvil y tablet. Lo que está en este repositorio es una parte de ese sistema llevada a código.
+
+**Móvil.** Inicio, rutas sugeridas sobre el mapa esquemático, el trayecto paso a paso y el detalle de una línea, donde la lista de estaciones se dibuja como la línea misma.
+
+<p>
+  <img src="docs/trazo/figma/movil-inicio.png" alt="Inicio en móvil: saldo de la tarjeta, atajos y novedades" width="23%" />
+  <img src="docs/trazo/figma/movil-rutas-sugeridas.png" alt="Rutas sugeridas sobre el mapa esquemático, con la ruta resaltada" width="23%" />
+  <img src="docs/trazo/figma/movil-trayecto.png" alt="Trayecto paso a paso: caminar, tomar la H20, transbordo y llegada" width="23%" />
+  <img src="docs/trazo/figma/movil-linea.png" alt="Detalle de la línea D con sus estaciones dibujadas como una línea" width="23%" />
+</p>
+
+**Tablet, pensada para personas mayores.** Una barra fija permite cambiar el tamaño del texto en cualquier momento (A− / A+), activar el alto contraste, leer en voz alta o pedir ayuda. Abajo, la misma pantalla de inicio con el texto en Muy grande, el modo guiado que muestra un paso del viaje a la vez y los ajustes de accesibilidad.
+
+<p>
+  <img src="docs/trazo/figma/tablet-texto-muy-grande.png" alt="Inicio en tablet con el texto en tamaño Muy grande" width="94%" />
+</p>
+<p>
+  <img src="docs/trazo/figma/tablet-modo-guiado.png" alt="Modo guiado en tablet: un paso del viaje a la vez, con cuenta regresiva y aviso antes de bajarse" width="46%" />
+  <img src="docs/trazo/figma/tablet-accesibilidad.png" alt="Ajustes de accesibilidad en tablet: tamaño del texto, voz, contraste y corrección de color" width="46%" />
 </p>
 
 ## Qué cambia
