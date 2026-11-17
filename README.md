@@ -1,3 +1,52 @@
+# Trazo · Propuesta de diseño para Paradero
+
+> **Demo de diseño, no oficial.** Este repositorio es una copia de [Paradero](https://github.com/croma-labs/paradero), la app abierta de transporte de Bogotá hecha por [Croma](https://usecroma.com), con la propuesta de diseño **Trazo** aplicada. No es una versión publicada de Paradero ni está respaldada por Croma. La propuesta original está abierta como pull request: [croma-labs/paradero#380](https://github.com/croma-labs/paradero/pull/380).
+
+**Trazo** dibuja Bogotá como un mapa de metro: papel, tinta y el color de cada línea. El color en pantalla siempre significa "una línea"; todo lo demás es papel y tinta. Nació como el rediseño de mi trabajo final de máster y aquí se ve funcionando sobre una app real.
+
+<p>
+  <img src="docs/trazo/cerca-escritorio.png" alt="Pantalla Cerca en escritorio: barra lateral de Trazo y mapa de Bogotá" width="68%" />
+  <img src="docs/trazo/cerca-movil-oscuro.png" alt="Pantalla Cerca en móvil con el tema nocturno" width="23%" />
+</p>
+<p>
+  <img src="docs/trazo/onboarding-escritorio.png" alt="Onboarding en escritorio con el texto en una columna centrada" width="45.5%" />
+  <img src="docs/trazo/bien-publico-escritorio.png" alt="Pantalla Bien público con la pestaña activa en tinta" width="45.5%" />
+</p>
+
+## Qué cambia
+
+**Identidad, por tokens.** Todo entra por el sistema de diseño de Paradero (`src/theme`), sin valores sueltos en las pantallas, y pasa sus verificaciones de tokens, contraste y textos en 7 idiomas.
+
+- **Paleta:** papel de mapa `#F0ECE2` y tinta `#1F1F23` en claro; el mismo mapa de noche en oscuro. Las paletas de alto contraste de Paradero no cambian.
+- **Una línea por parte del sistema:** TransMilenio, SITP zonal, alimentador, TransMiCable… cada uno con su color de línea y un tono profundo para su insignia. El texto de las 8 insignias pasa WCAG AA, y la verificación de contraste lo mide.
+- **Tipografía:** Familjen Grotesk en títulos, sólidos como letreros de estación; Instrument Sans para leer; DM Mono para rutas, minutos y etiquetas.
+- **Componentes:** insignias de ruta llenas del color de su línea, con una marca de forma para leerlas sin color; paraderos dibujados como estaciones del mapa (aro para SITP, cuadro para TransMilenio); botones en píldora de tinta.
+
+**Web responsive.**
+
+- **Navegación:** desde 900 px, barra lateral con etiquetas siempre visibles y la pestaña abierta en tinta; en pantallas angostas, barra inferior.
+- **Columnas legibles:** el contenido nunca se estira de borde a borde: máximo 720 px por pestaña y 560 px en el onboarding.
+- **Mapa real con MapLibre:** los mismos mapas base de CARTO que la app del teléfono, con paraderos que se tocan, la línea de la ruta y los buses en movimiento.
+
+El detalle de cada decisión está en [`docs/DESIGN.md`](docs/DESIGN.md).
+
+## Cómo verlo
+
+```bash
+npm ci
+cp .env.example .env.local   # y pon tu CROMA_API_KEY (gratis en platform.usecroma.com)
+npx expo start --web
+```
+
+Sin clave, la app abre igual pero sin paraderos ni llegadas. En navegadores Chromium, el almacenamiento de Paradero en web (`expo-sqlite`) puede dejar la pantalla en blanco al arrancar; es una limitación del proyecto original en web, no de Trazo. La app está pensada para iOS y Android.
+
+## Créditos
+
+- **Paradero:** código de [Croma](https://github.com/croma-labs/paradero), con licencia MIT (ver [`LICENSE`](LICENSE)).
+- **Propuesta de diseño Trazo:** [Julián Rueda](https://julirueda.com). Diseño en Figma: [Prototipo TFM](https://www.figma.com/design/D4vyBMah2ChWT2k6sJTFqo/Prototipo-TFM?node-id=586-2728).
+
+---
+
 # Paradero
 
 **Tu bus, sin adivinar.** La app abierta para moverse en Bogotá: TransMilenio, SITP, alimentadores y TransMiCable en un solo lugar.
