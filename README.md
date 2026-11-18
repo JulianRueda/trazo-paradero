@@ -68,7 +68,20 @@ Sin clave, la app abre igual pero sin paraderos ni llegadas. En navegadores Chro
 ## Créditos
 
 - **Paradero:** código de [Croma](https://github.com/croma-labs/paradero), con licencia MIT (ver [`LICENSE`](LICENSE)).
-- **Propuesta de diseño Trazo:** [Julián Rueda](https://julirueda.com). Diseño en Figma: [Prototipo TFM](https://www.figma.com/design/D4vyBMah2ChWT2k6sJTFqo/Prototipo-TFM?node-id=586-2728).
+- **Propuesta de diseño Trazo:** [Julián Camilo Rueda Ramírez](https://julirueda.com). Diseño en Figma: [Prototipo TFM](https://www.figma.com/design/D4vyBMah2ChWT2k6sJTFqo/Prototipo-TFM?node-id=586-2728).
+
+## Licencias
+
+Este repositorio tiene dos licencias distintas:
+
+| Qué | Autor | Licencia |
+|---|---|---|
+| Código fuente de Paradero | Croma y quienes contribuyen | [MIT](LICENSE) |
+| Propuesta de diseño Trazo: `docs/trazo/`, el archivo de Figma y la identidad visual Trazo | Julián Camilo Rueda Ramírez | © 2026, todos los derechos reservados ([`docs/trazo/LICENSE`](docs/trazo/LICENSE)) |
+
+La licencia MIT del código no cubre la propuesta de diseño Trazo. No se permite copiar, modificar, distribuir ni usar el diseño, total o parcialmente, sin autorización previa y por escrito del autor. Para pedir permiso: [julian.rueda1118@gmail.com](mailto:julian.rueda1118@gmail.com).
+
+*The Paradero source code is MIT licensed. The Trazo design proposal is © 2026 Julián Camilo Rueda Ramírez, all rights reserved, and is not covered by the MIT License.*
 
 ---
 
